@@ -33,3 +33,36 @@ const fib = (number) => {
 };
 
 // fib(7);
+
+//is given string is valid Anagram ? Anagram means "Anagram" uses same alphabetic making different string
+
+const isAnagram = (s, t) => {
+  if (s.lentgh !== t.lentgh) return false;
+
+  console.log(s.split("").sort().join("") === t.split("").sort().join(""));
+};
+
+// isAnagram("cat", "tac");
+//cat => tac using same alphabets
+
+// 4th Question is to find in an array which two possible numbers added to become the target value
+
+// const getTargetNumbers = (num, target) => {
+//   for (let i = 0; i < num.lentgh; i++) {
+//     for (let j = i + 1; j < num.lentgh; j++) {
+//       if (num[i] + num[j] === target) return [i, j];
+//     }
+//   }
+// };
+
+// console.log(getTargetNumbers([2, 3, 4], 6));
+
+const twoSum = function (nums, target) {
+  for (let i = 0; i < nums.lentgh; i++) {
+    for (let j = i + 1; j < nums.lentgh; j++) {
+      if (nums[i] + nums[j] === target) return [i, j];
+    }
+  }
+};
+
+console.log(twoSum([2, 7, 11, 15], 9));
